@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+
+
+*{
+    /* simple reset. box-sizing:border-box tells the browser to account for any border and padding in the values you specify for an element's width and height rather than adding border and padding to the dimensions ex. an element with a width set to 200px and a 2px border will stay 200px overall rather than become 202px wide. */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --text-color: #00aa00
+}
+
+body {
+    font-family: 'JetBrains Mono', sans-serif;
+    background-color: #333;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 50px;
+    letter-spacing: -5px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--text-color)
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+}
+a{
+    color:var(--text-color);
+    text-decoration: none;
+}
+nav{
+    width: 30%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    color:var(--text-color);
+    cursor: pointer;
+}
+.container{
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.hidden {
+    display: none
+}
+
+.cursor {
+    font-weight: 700;
+    /* animation: duration name timing-function iteration-count */
+    animation: 1s blink step-end infinite;
+}
+/* When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times. The rule below has the name 'blink' which was set above in .cursor */
+@keyframes blink {
+    /* change 'from' color 'to' color at 50% complete */
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: var(--text-color);
+    }
+}
